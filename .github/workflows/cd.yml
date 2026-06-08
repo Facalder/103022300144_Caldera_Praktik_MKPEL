@@ -29,12 +29,11 @@ jobs:
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
-  create-github-release:
-      - name: Create GitHub Release
-      - uses: softprops/action-gh-release@v2
-        with:
-            tag_name: v1.0.${{ github.run_number }}
-            name: Release v1.0.${{ github.run_number }}
-            files: target/*.jar
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create GitHub Release
+    - uses: softprops/action-gh-release@v2
+      with:
+        tag_name: v1.0.${{ github.run_number }}
+        name: Release v1.0.${{ github.run_number }}
+        files: target/*.jar
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
