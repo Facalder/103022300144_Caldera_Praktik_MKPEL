@@ -9,5 +9,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>com.caldera.todo.list.caldera.cli.TodoListCalderaCli</exec.mainClass>
+        <sonar.organization>mkpel</sonar.organization>
     </properties>
 </project>
